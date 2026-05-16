@@ -511,8 +511,16 @@ ul { list-style: none; }
 }
 .icon-link:hover { color: var(--txt); }
 
+.card__company {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--txt-3);
+}
+
 .card__title {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -522,6 +530,12 @@ ul { list-style: none; }
   color: var(--txt-2);
   line-height: 1.7;
   flex: 1;
+}
+
+.projects__footer {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
 }
 
 /* ── CONTACT ────────────────────────────────────────────────────── */

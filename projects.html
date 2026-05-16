@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets — Aurélien AH-SANE</title>
+  <meta name="description" content="Tous les projets d'Aurélien AH-SANE — développement web, data engineering, DevOps, IA générative.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%236366f1'/><text x='16' y='22' font-family='Inter,sans-serif' font-weight='700' font-size='13' fill='white' text-anchor='middle'>AA</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-header {
+      padding: 160px 0 80px;
+      border-bottom: 1px solid var(--brd);
+    }
+    .page-header__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--txt-3);
+      margin-bottom: 32px;
+      transition: color var(--ease);
+    }
+    .page-header__back:hover { color: var(--txt); }
+
+    .all-projects {
+      padding: 80px 0 120px;
+    }
+
+    .projects-group {
+      margin-bottom: 72px;
+    }
+    .projects-group__label {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .projects-group__label h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--txt-3);
+      white-space: nowrap;
+    }
+    .projects-group__line {
+      flex: 1;
+      height: 1px;
+      background: var(--brd);
+    }
+
+    .cards--wide {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 680px) {
+      .cards--wide { grid-template-columns: 1fr; }
+    }
+
+    .card--wide .card__desc {
+      font-size: 14px;
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">AA</a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">À propos</a></li>
+        <li><a href="index.html#skills">Compétences</a></li>
+        <li><a href="projects.html" class="active">Projets</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="btn btn--sm btn--primary nav__cta">Me contacter</a>
+      <button class="nav__burger" id="burger" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#skills">Compétences</a>
+      <a href="projects.html">Projets</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <a href="index.html" class="page-header__back reveal">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 4l-4 4 4 4"/></svg>
+        Retour
+      </a>
+      <span class="label reveal">Tous les projets</span>
+      <h1 class="heading reveal" style="font-size: clamp(32px, 5vw, 52px); margin-bottom: 12px;">Ce que j'ai construit</h1>
+      <p class="body-text reveal" style="max-width: 480px; margin-bottom: 0;">
+        Projets académiques, stages en entreprise et réalisations personnelles.
+      </p>
+    </div>
+  </div>
+
+  <!-- ALL PROJECTS -->
+  <div class="all-projects">
+    <div class="container">
+
+      <!-- PROJETS ACADÉMIQUES -->
+      <div class="projects-group">
+        <div class="projects-group__label reveal">
+          <h2>Académiques</h2>
+          <div class="projects-group__line"></div>
+        </div>
+        <div class="cards cards--wide">
+
+          <article class="card card--wide reveal">
+            <div class="card__top">
+              <div class="card__ico">◈</div>
+              <div class="card__actions">
+                <a href="#" class="icon-link" aria-label="Code source">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="card__company">Deloitte · Master Project · 4 mois</div>
+            <h3 class="card__title">Interface IA Générative — Assistant de formation</h3>
+            <p class="card__desc">Développement d'une interface web d'assistance à la création et à la personnalisation de formations, intégrant de l'IA générative et suivant une méta-syntaxe conçue pour guider le prompt. Développement parallèle d'une application mobile Flutter permettant de consulter les formations enregistrées et stockées en base.</p>
+            <div class="tags tags--sm">
+              <span class="tag">IA Générative</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Python</span>
+            </div>
+          </article>
+
+          <article class="card card--wide reveal">
+            <div class="card__top">
+              <div class="card__ico">⬡</div>
+              <div class="card__actions">
+                <a href="#" class="icon-link" aria-label="Code source">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Rapport">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2H2.5A1.5 1.5 0 001 3.5v9A1.5 1.5 0 002.5 14h9A1.5 1.5 0 0013 12.5V9m0-8H9m4 0l-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="card__company">EFREI Paris · Projet DevOps</div>
+            <h3 class="card__title">DevOps — Agile Auto-Parts (AAP)</h3>
+            <p class="card__desc">Implémentation complète d'une chaîne DevOps pour une entreprise simulée de pièces automobiles. Mise en place de pipelines CI/CD, conteneurisation avec Docker, gestion de versions Git, automatisation des déploiements et application des pratiques Agile tout au long du cycle de vie du projet.</p>
+            <div class="tags tags--sm">
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Git</span>
+              <span class="tag">Agile</span>
+              <span class="tag">Linux</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- EXPÉRIENCES PROFESSIONNELLES -->
+      <div class="projects-group">
+        <div class="projects-group__label reveal">
+          <h2>Expériences professionnelles</h2>
+          <div class="projects-group__line"></div>
+        </div>
+        <div class="cards cards--wide">
+
+          <article class="card card--wide reveal">
+            <div class="card__top">
+              <div class="card__ico">◎</div>
+            </div>
+            <div class="card__company">Saint-Gobain · Stage Ingénieur Data · Nov 2023 – Avr 2024</div>
+            <h3 class="card__title">Solutions de gestion d'incidents & optimisation BDD</h3>
+            <p class="card__desc">Développement de solutions SSIS de gestion d'incidents avec Magnitude BI, administration SQL Server, rédaction de spécifications fonctionnelles et techniques pour des projets ASP.NET MVC en architecture MVC, optimisation de bases de données SQL Server et Snowflake via scripts PowerShell et procédures stockées.</p>
+            <div class="tags tags--sm">
+              <span class="tag">SSIS</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">Snowflake</span>
+              <span class="tag">PowerShell</span>
+              <span class="tag">ASP.NET MVC</span>
+              <span class="tag">Magnitude BI</span>
+            </div>
+          </article>
+
+          <article class="card card--wide reveal">
+            <div class="card__top">
+              <div class="card__ico">◇</div>
+            </div>
+            <div class="card__company">CGI · Stage Consultant BA Salesforce · Mar 2025 – Sep 2025</div>
+            <h3 class="card__title">Amélioration & qualité logicielle — Salesforce CRM</h3>
+            <p class="card__desc">Analyste fonctionnel et technique en environnement Agile et international : recueil des besoins métier, rétro-documentation, mise en œuvre d'améliorations sur la plateforme Salesforce CRM et garantie qualité logicielle — tests, validation, résolution d'anomalies.</p>
+            <div class="tags tags--sm">
+              <span class="tag">Salesforce</span>
+              <span class="tag">Agile</span>
+              <span class="tag">Tests</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Aurélien AH-SANE</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

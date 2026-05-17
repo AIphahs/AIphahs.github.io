@@ -12,10 +12,15 @@ const sections = document.querySelectorAll('section[id]');
 const updateNav = () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
 
+  const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80;
   let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
-  });
+  if (nearBottom) {
+    current = sections[sections.length - 1]?.id || '';
+  } else {
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+  }
   navLinks.forEach(a => {
     a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
   });

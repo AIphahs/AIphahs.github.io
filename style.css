@@ -223,9 +223,33 @@ ul { list-style: none; }
 .nav__mobile a:last-child { border-bottom: none; }
 .nav__mobile a:hover { color: var(--txt); }
 
+/* lang toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  color: var(--txt-3);
+  background: none;
+  border: 1px solid var(--brd);
+  border-radius: var(--r);
+  padding: 5px 9px;
+  cursor: pointer;
+  transition: border-color var(--ease);
+  margin-right: 4px;
+  font-family: inherit;
+}
+.lang-toggle:hover { border-color: var(--brd-h); }
+.lang-toggle [data-lang] { transition: color var(--ease); }
+.lang-toggle [data-lang].active { color: var(--txt); }
+.lang-sep { color: var(--txt-3); }
+
 @media (max-width: 720px) {
   .nav__links, .nav__cta { display: none; }
   .nav__burger { display: flex; }
+  .lang-toggle { margin-right: 0; }
 }
 
 /* ── HERO ───────────────────────────────────────────────────────── */

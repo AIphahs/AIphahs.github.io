@@ -23,24 +23,29 @@
     <div class="nav__inner">
       <a href="#" class="nav__logo">AA</a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#experience">Expérience</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-i18n="navAbout">À propos</a></li>
+        <li><a href="#skills" data-i18n="navSkills">Compétences</a></li>
+        <li><a href="#experience" data-i18n="navExperience">Expérience</a></li>
+        <li><a href="#projects" data-i18n="navProjects">Projets</a></li>
+        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn btn--sm btn--primary nav__cta">Me contacter</a>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span data-lang="fr">FR</span>
+        <span class="lang-sep">/</span>
+        <span data-lang="en">EN</span>
+      </button>
+      <a href="#contact" class="btn btn--sm btn--primary nav__cta" data-i18n="navCta">Me contacter</a>
       <button class="nav__burger" id="burger" aria-label="Ouvrir le menu">
         <span></span>
         <span></span>
       </button>
     </div>
     <div class="nav__mobile" id="mobileMenu">
-      <a href="#about">À propos</a>
-      <a href="#skills">Compétences</a>
-      <a href="#experience">Expérience</a>
-      <a href="#projects">Projets</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-i18n="navAbout">À propos</a>
+      <a href="#skills" data-i18n="navSkills">Compétences</a>
+      <a href="#experience" data-i18n="navExperience">Expérience</a>
+      <a href="#projects" data-i18n="navProjects">Projets</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
     </div>
   </nav>
 
@@ -53,19 +58,19 @@
     <div class="container hero__content">
       <p class="hero__badge">
         <span class="badge__dot"></span>
-        Disponible · Freelance &amp; CDI
+        <span data-i18n="heroBadge">Disponible · Freelance &amp; CDI</span>
       </p>
       <h1 class="hero__heading">
         Aurélien AH-SANE
-        <span class="text-gradient">Ingénieur Logiciel</span>
+        <span class="text-gradient" data-i18n="heroRole">Ingénieur Logiciel</span>
       </h1>
-      <p class="hero__sub">
+      <p class="hero__sub" data-i18n="heroSub">
         Je conçois et développe des applications web, des solutions data et des pipelines DevOps —
         du code propre à l'architecture robuste.
       </p>
       <div class="hero__cta">
-        <a href="#projects" class="btn btn--primary btn--lg">Voir mes projets</a>
-        <a href="#contact" class="btn btn--ghost btn--lg">Me contacter</a>
+        <a href="#projects" class="btn btn--primary btn--lg" data-i18n="heroCta1">Voir mes projets</a>
+        <a href="#contact" class="btn btn--ghost btn--lg" data-i18n="heroCta2">Me contacter</a>
       </div>
     </div>
     <div class="hero__scroll" aria-hidden="true">
@@ -78,14 +83,14 @@
     <div class="container">
       <div class="about__layout">
         <div class="reveal">
-          <span class="label">À propos</span>
-          <h2 class="heading">De l'idée au code,<br>de la donnée à la production</h2>
-          <p class="body-text">
+          <span class="label" data-i18n="aboutLabel">À propos</span>
+          <h2 class="heading" data-i18n="aboutHeading">De l'idée au code,<br>de la donnée à la production</h2>
+          <p class="body-text" data-i18n="aboutP1">
             Ingénieur Logiciel diplômé EFREI Paris, j'ai travaillé sur des projets techniques variés :
             développement web fullstack (ReactJS, ASP.NET MVC), data engineering (SQL Server, Snowflake, SSIS)
             et mise en œuvre DevOps (Docker, CI/CD). J'aime construire des solutions fiables, lisibles et bien architecturées.
           </p>
-          <p class="body-text">
+          <p class="body-text" data-i18n="aboutP2">
             Expérimenté en environnements professionnels exigeants — Saint-Gobain et CGI —
             j'ai appris à sécuriser le cycle de vie logiciel : qualité du code, tests, intégration continue
             et collaboration dans des équipes pluridisciplinaires et internationales.
@@ -99,19 +104,19 @@
         <div class="about__stats">
           <div class="stat reveal">
             <span class="stat__n">2</span>
-            <span class="stat__l">Expériences professionnelles</span>
+            <span class="stat__l" data-i18n="aboutStat1">Expériences professionnelles</span>
           </div>
           <div class="stat reveal">
             <span class="stat__n">8+</span>
-            <span class="stat__l">Projets réalisés</span>
+            <span class="stat__l" data-i18n="aboutStat2">Projets réalisés</span>
           </div>
           <div class="stat reveal">
             <span class="stat__n">3</span>
-            <span class="stat__l">Langues — FR · EN · CN</span>
+            <span class="stat__l" data-i18n="aboutStat3">Langues — FR · EN · CN</span>
           </div>
           <div class="stat reveal">
             <span class="stat__n">830</span>
-            <span class="stat__l">TOEIC — Anglais B2</span>
+            <span class="stat__l" data-i18n="aboutStat4">TOEIC — Anglais B2</span>
           </div>
         </div>
       </div>
@@ -122,12 +127,12 @@
   <section class="section section--alt" id="skills">
     <div class="container">
       <div class="section__top reveal">
-        <span class="label">Stack technique</span>
-        <h2 class="heading">Compétences</h2>
+        <span class="label" data-i18n="skillsLabel">Stack technique</span>
+        <h2 class="heading" data-i18n="skillsHeading">Compétences</h2>
       </div>
       <div class="skills__grid">
         <div class="skill-col reveal">
-          <h3 class="skill-col__name">Langages</h3>
+          <h3 class="skill-col__name" data-i18n="skillsCat1">Langages</h3>
           <div class="skill-items">
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="skill-item__ico" alt=""><span>Java</span></div>
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="skill-item__ico" alt=""><span>Python</span></div>
@@ -137,7 +142,7 @@
           </div>
         </div>
         <div class="skill-col reveal">
-          <h3 class="skill-col__name">Web & Fullstack</h3>
+          <h3 class="skill-col__name" data-i18n="skillsCat2">Web &amp; Fullstack</h3>
           <div class="skill-items">
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="skill-item__ico" alt=""><span>ReactJS</span></div>
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" class="skill-item__ico" alt=""><span>VueJS</span></div>
@@ -147,7 +152,7 @@
           </div>
         </div>
         <div class="skill-col reveal">
-          <h3 class="skill-col__name">Données & Bases</h3>
+          <h3 class="skill-col__name" data-i18n="skillsCat3">Données &amp; Bases</h3>
           <div class="skill-items">
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" class="skill-item__ico" alt=""><span>SQL Server</span></div>
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" class="skill-item__ico" alt=""><span>MySQL</span></div>
@@ -157,7 +162,7 @@
           </div>
         </div>
         <div class="skill-col reveal">
-          <h3 class="skill-col__name">DevOps & Systèmes</h3>
+          <h3 class="skill-col__name" data-i18n="skillsCat4">DevOps &amp; Systèmes</h3>
           <div class="skill-items">
             <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="skill-item__ico" alt=""><span>Docker</span></div>
             <div class="skill-item"><span>CI/CD</span></div>
@@ -175,17 +180,17 @@
   <section class="section section--alt" id="experience">
     <div class="container">
       <div class="section__top reveal">
-        <span class="label">Parcours</span>
-        <h2 class="heading">Expériences professionnelles</h2>
+        <span class="label" data-i18n="expLabel">Parcours</span>
+        <h2 class="heading" data-i18n="expHeading">Expériences professionnelles</h2>
       </div>
       <div class="timeline">
 
         <div class="timeline__item reveal">
-          <div class="timeline__date">Mar 2025<br>Sep 2025</div>
+          <div class="timeline__date" data-i18n="expDate1">Mar 2025<br>Sep 2025</div>
           <div class="timeline__body">
             <div class="timeline__co">CGI</div>
-            <h3 class="timeline__role">Consultant Salesforce — Stage Ingénieur</h3>
-            <p class="timeline__desc">Analyste technique en environnement Agile et international : mise en œuvre d'améliorations Salesforce CRM, garantie qualité logicielle (tests, validation, résolution d'anomalies), rétro-documentation et recueil des besoins métier.</p>
+            <h3 class="timeline__role" data-i18n="expRole1">Consultant Salesforce — Stage Ingénieur</h3>
+            <p class="timeline__desc" data-i18n="expDesc1">Analyste technique en environnement Agile et international : mise en œuvre d'améliorations Salesforce CRM, garantie qualité logicielle (tests, validation, résolution d'anomalies), rétro-documentation et recueil des besoins métier.</p>
             <div class="tags tags--sm">
               <span class="tag">Salesforce</span>
               <span class="tag">Agile</span>
@@ -196,11 +201,11 @@
         </div>
 
         <div class="timeline__item reveal">
-          <div class="timeline__date">Nov 2023<br>Avr 2024</div>
+          <div class="timeline__date" data-i18n="expDate2">Nov 2023<br>Avr 2024</div>
           <div class="timeline__body">
             <div class="timeline__co">Saint-Gobain</div>
-            <h3 class="timeline__role">Data Engineer — Stage Ingénieur</h3>
-            <p class="timeline__desc">Développement de solutions SSIS de gestion d'incidents avec Magnitude BI, administration et optimisation SQL Server et Snowflake, rédaction de spécifications techniques pour projets ASP.NET MVC, scripts PowerShell et procédures stockées.</p>
+            <h3 class="timeline__role" data-i18n="expRole2">Data Engineer — Stage Ingénieur</h3>
+            <p class="timeline__desc" data-i18n="expDesc2">Développement de solutions SSIS de gestion d'incidents avec Magnitude BI, administration et optimisation SQL Server et Snowflake, rédaction de spécifications techniques pour projets ASP.NET MVC, scripts PowerShell et procédures stockées.</p>
             <div class="tags tags--sm">
               <span class="tag">SSIS</span>
               <span class="tag">SQL Server</span>
@@ -219,8 +224,8 @@
   <section class="section" id="projects">
     <div class="container">
       <div class="section__top reveal">
-        <span class="label">Projets</span>
-        <h2 class="heading">Ce que j'ai construit</h2>
+        <span class="label" data-i18n="projectsLabel">Projets</span>
+        <h2 class="heading" data-i18n="projectsHeading">Ce que j'ai construit</h2>
       </div>
       <div class="cards">
 
@@ -238,9 +243,9 @@
               </a>
             </div>
           </div>
-          <div class="card__company">Projet personnel</div>
-          <h3 class="card__title">SmartCart — SaaS de gestion des courses</h3>
-          <p class="card__desc">Application cloud de scan de tickets de caisse — extraction automatique des articles et prix via OCR, analyse des habitudes de dépenses et comparaison inter-enseignes.</p>
+          <div class="card__company" data-i18n="proj1Company">Projet personnel</div>
+          <h3 class="card__title" data-i18n="proj1Title">SmartCart — SaaS de gestion des courses</h3>
+          <p class="card__desc" data-i18n="proj1Desc">Application cloud de scan de tickets de caisse — extraction automatique des articles et prix via OCR, analyse des habitudes de dépenses et comparaison inter-enseignes.</p>
           <div class="tags tags--sm">
             <span class="tag">Spring Boot</span>
             <span class="tag">Java</span>
@@ -264,9 +269,9 @@
               </a>
             </div>
           </div>
-          <div class="card__company">Projet académique EFREI</div>
-          <h3 class="card__title">Plateforme d'investissement immobilier</h3>
-          <p class="card__desc">Système de financement collectif — gestion de portefeuilles, distribution de revenus locatifs, paiements Stripe, prévention des race conditions et scalabilité horizontale sur AWS.</p>
+          <div class="card__company" data-i18n="proj2Company">Projet académique EFREI</div>
+          <h3 class="card__title" data-i18n="proj2Title">Plateforme d'investissement immobilier</h3>
+          <p class="card__desc" data-i18n="proj2Desc">Système de financement collectif — gestion de portefeuilles, distribution de revenus locatifs, paiements Stripe, prévention des race conditions et scalabilité horizontale sur AWS.</p>
           <div class="tags tags--sm">
             <span class="tag">Spring Boot</span>
             <span class="tag">Docker</span>
@@ -290,9 +295,9 @@
               </a>
             </div>
           </div>
-          <div class="card__company">Projet académique EFREI · S9</div>
-          <h3 class="card__title">DevOps — Agile Auto-Parts (AAP)</h3>
-          <p class="card__desc">Implémentation complète d'une chaîne DevOps pour une entreprise simulée : pipelines CI/CD, conteneurisation Docker, automatisation des déploiements et pratiques Agile sur l'ensemble du cycle de vie.</p>
+          <div class="card__company" data-i18n="proj3Company">Projet académique EFREI · S9</div>
+          <h3 class="card__title" data-i18n="proj3Title">DevOps — Agile Auto-Parts (AAP)</h3>
+          <p class="card__desc" data-i18n="proj3Desc">Implémentation complète d'une chaîne DevOps pour une entreprise simulée : pipelines CI/CD, conteneurisation Docker, automatisation des déploiements et pratiques Agile sur l'ensemble du cycle de vie.</p>
           <div class="tags tags--sm">
             <span class="tag">Docker</span>
             <span class="tag">CI/CD</span>
@@ -304,7 +309,7 @@
       </div>
       <div class="projects__footer reveal">
         <a href="projects.html" class="btn btn--ghost btn--lg">
-          Voir tous les projets
+          <span data-i18n="projectsViewAll">Voir tous les projets</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
@@ -315,9 +320,9 @@
   <section class="section section--alt" id="contact">
     <div class="container">
       <div class="contact__wrap reveal">
-        <span class="label">Contact</span>
-        <h2 class="heading">Travaillons ensemble</h2>
-        <p class="body-text contact__desc">
+        <span class="label" data-i18n="contactLabel">Contact</span>
+        <h2 class="heading" data-i18n="contactHeading">Travaillons ensemble</h2>
+        <p class="body-text contact__desc" data-i18n="contactDesc">
           Disponible pour des missions freelance ou opportunités en CDI.<br>
           N'hésitez pas à me contacter.
         </p>
@@ -328,7 +333,7 @@
           </a>
           <a href="cv.pdf" download class="btn btn--ghost btn--lg">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Télécharger mon CV
+            <span data-i18n="contactCv">Télécharger mon CV</span>
           </a>
         </div>
         <div class="contact__links">
@@ -336,7 +341,7 @@
             <svg width="17" height="17" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/aurelien-ahsane" target="_blank" rel="noopener noreferrer" class="social">
+          <a href="https://www.linkedin.com/in/aurélien-ah-sane-394766251/" target="_blank" rel="noopener noreferrer" class="social">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
@@ -352,11 +357,12 @@
       <nav class="footer__links" aria-label="Liens footer">
         <a href="https://github.com/AIphahs" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/aurélien-ah-sane-394766251/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="projects.html">Projets</a>
+        <a href="projects.html" data-i18n="footerProjects">Projets</a>
       </nav>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
